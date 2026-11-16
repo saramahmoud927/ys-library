@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Y S Library</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Nunito+Sans:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="bar">
+<a class="logo" href="#home">Y S Library</a>
+<nav id="nav" aria-label="Main">
+<a href="#home">🏠 Home</a><a href="#catalog">📖 Catalog</a><a href="#services">☕ Services</a><a href="#events">🎉 Events</a><a href="#membership">💌 Membership</a><a href="#contact">📍 Contact</a>
+</nav>
+<button class="icon" id="theme" aria-label="Switch colour theme">Theme</button>
+</div></header>
+<main>
+
+<section data-page="home">
+<div class="hero">
+<div>
+<h1>A quiet place for curious minds.</h1>
+<p>Y S Library has more than 40,000 books, calm reading rooms and free programmes for every age. Browse the catalogue, reserve a title and join us in person.</p>
+<p><a class="btn" href="#catalog">Browse the catalog</a> <a class="btn alt" href="#membership">Become a member</a></p>
+</div>
+<div class="shelf" aria-hidden="true"><i style="height:70%;--c:#7b5238"></i><i style="height:90%;--c:#a67b5b"></i><i style="height:60%;--c:#4f3524"></i><i style="height:82%;--c:#8c6a4a"></i><i style="height:95%;--c:#5f4330"></i><i style="height:66%;--c:#b89473"></i><i style="height:78%;--c:#6e4c34"></i></div>
+</div>
+<div class="stats">
+<div class="stat"><b>40,000+</b>Books and journals</div><div class="stat"><b>12,500</b>Active members</div><div class="stat"><b>6</b>Reading rooms</div><div class="stat"><b>120</b>Events every year</div>
+</div>
+<h2>New on the shelves</h2>
+<div class="grid" id="featured"></div>
+<p style="margin-top:28px"><a class="btn alt" href="#catalog">See all books</a></p>
+</section>
+
+<section data-page="catalog">
+<h2>Book catalog</h2>
+<div class="tools">
+<input id="q" type="search" placeholder="Search by title or author" aria-label="Search books">
+<select id="cat" aria-label="Category"><option value="All">All categories</option><option>Fiction</option><option>Science</option><option>History</option><option>Technology</option><option>Kids</option></select>
+<select id="sort" aria-label="Sort"><option value="t">Sort by title</option><option value="y">Newest first</option></select>
+</div>
+<p id="count" aria-live="polite"></p>
+<div class="grid" id="list"></div>
+</section>
+
+<section data-page="services">
+<h2>Our services</h2>
+<div class="cards">
+<div class="card"><h3>Book lending</h3><p>Borrow up to 8 books for 21 days. Renew online or at the desk.</p></div>
+<div class="card"><h3>Study rooms</h3><p>Quiet rooms for one to six people. Book a two-hour slot at the front desk.</p></div>
+<div class="card"><h3>Computers and Wi-Fi</h3><p>20 computers, free Wi-Fi and printing at low cost for all members.</p></div>
+<div class="card"><h3>Children’s corner</h3><p>Picture books, story time and a safe space for readers under 12.</p></div>
+<div class="card"><h3>Research help</h3><p>Our librarians help you find sources, cite them and use databases.</p></div>
+<div class="card"><h3>Digital library</h3><p>Read e-books and listen to audiobooks from home with your member card.</p></div>
+</div>
+</section>
+
+<section data-page="events">
+<h2>Upcoming events</h2>
+<div class="event"><div class="date">Nov<b>21</b></div><div><h3>Children’s story morning</h3><p>Stories, songs and crafts for ages 4 to 8. Free entry.</p></div><button class="btn alt" data-rsvp="Story morning">Save my seat</button></div>
+<div class="event"><div class="date">Nov<b>28</b></div><div><h3>Author talk: writing your first novel</h3><p>A local author shares how she wrote and published her debut.</p></div><button class="btn alt" data-rsvp="Author talk">Save my seat</button></div>
+<div class="event"><div class="date">Dec<b>05</b></div><div><h3>Coding for beginners</h3><p>A hands-on workshop on HTML and CSS. Bring your own laptop.</p></div><button class="btn alt" data-rsvp="Coding workshop">Save my seat</button></div>
+<div class="event"><div class="date">Dec<b>12</b></div><div><h3>Winter book swap</h3><p>Bring a book you loved and take home a new one.</p></div><button class="btn alt" data-rsvp="Book swap">Save my seat</button></div>
+</section>
+
+<section data-page="membership">
+<h2>Membership</h2>
+<div class="cards" style="margin-bottom:40px">
+<div class="card plan"><h3>Reader</h3><div class="price">Free</div><ul><li>Borrow 4 books</li><li>Reading rooms</li><li>Wi-Fi</li></ul></div>
+<div class="card plan best"><h3>Member</h3><div class="price">$15 / year</div><ul><li>Borrow 8 books</li><li>Digital library</li><li>Study room booking</li></ul></div>
+<div class="card plan"><h3>Family</h3><div class="price">$30 / year</div><ul><li>Up to 5 people</li><li>Borrow 20 books</li><li>Event priority</li></ul></div>
+</div>
+<h3>Join today</h3>
+<form id="join" novalidate style="max-width:520px">
+<div><label for="jn">Full name</label><input id="jn"><div class="err"></div></div>
+<div><label for="je">Email</label><input id="je" type="email"><div class="err"></div></div>
+<div><label for="jp">Plan</label><select id="jp"><option>Reader</option><option>Member</option><option>Family</option></select></div>
+<button class="btn" type="submit">Join the library</button>
+</form>
+</section>
+
+<section data-page="contact">
+<h2>Visit and contact</h2>
+<div class="two">
+<div>
+<span class="open" id="open"></span>
+<table>
+<tr><td>Sunday to Thursday</td><td>9:00 AM – 8:00 PM</td></tr>
+<tr><td>Friday</td><td>Closed</td></tr>
+<tr><td>Saturday</td><td>10:00 AM – 4:00 PM</td></tr>
+</table>
+<p style="margin-top:20px">12 Reading Street, Old Town<br>Phone: +20 55 123 4567<br>Email: hello@yslibrary.example</p>
+</div>
+<form id="msg" novalidate>
+<div><label for="mn">Your name</label><input id="mn"><div class="err"></div></div>
+<div><label for="me">Email</label><input id="me" type="email"><div class="err"></div></div>
+<div><label for="mm">Message</label><textarea id="mm" rows="5"></textarea><div class="err"></div></div>
+<button class="btn" type="submit">Send message</button>
+</form>
+</div>
+</section>
+
+</main>
+<footer>© 2026 Y S Library. Open to everyone.</footer>
+<dialog id="dlg"></dialog>
+<div id="toast" role="status"></div>
+<script src="script.js"></script>
+</body>
+</html>
